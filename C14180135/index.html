@@ -1,10 +1,12 @@
 <html>
     <body>
         <h2>C14180135/Cynthia Wijaya</h2>
+
         <input type="date" id="dtpicker1" name="dtpicker1">
         <input type="date" id="dtpicker1" name="dtpicker1">
         <button type="button" onclick="hitunghari()">Hitung hari</button>
-
+        <br>
+        <br>
         <script>
             function hitunghari() {
               var tglpicker =  document.getElementById("dtpicker1").value;
@@ -12,5 +14,36 @@
               var bedahari = Date();
             }
         </script>
+
+        <button>Button 1</button>
+        <button>Button 2</button>
+
+        <p>
+    1. Git Commits : (git commit -m "namaversi")melakukan record setiap versi atau membuat versi copy dari file- file yg ada di directory yg kita commit.
+    <br>2. Git Branches: (git branch branchname) Membuat branch baru
+    <br>3. Branches and Merging: (git merge namabranch) Ketika skg kita sdg di branch lain dari branch yg bernama namabranch maka git merge akan menggabungkan branch kita yg saat ini dg branch yg bernama namabranch.
+    <br>4. Git Rebase: (git rebase namabranch) artinya utk menggabungkan dua branch yg dimana branch yg saat ini kita berada dg branch yg bernama namabranch tapi hasil dri penggabungannya di commit pararel dengan branch yang bernama namabranch bukan di branch yg satunya.
+    <br>5. Head: (git checkout namacommit) Head ada di posisi yg saat ini di git checkout.
+    <br>6. Relative refs: (git checkout main^) artinya kita pindahkan Head ke commit yang sblmnya branch main.Atau dg kata lain kita checkout dan pindah posisi ke commit sebelumnya branch main.
+    <br>7. Git Checkout main~4 : arti operator ~ disini berarti mundur atau pindah ke commit sebelumnya branch main sebanyak 4 kali. Tetapi kalau perintah (git branch -f main HEAD~3) artinya kita memindahkan branch main kita ke commit posisi ke 3 dari yang berada sblm branch saat ini atau letak head saat ini.  
+    <br>8. Reversing changes in Git: (git reset Head~1) artinya kita undo atau balikkan ke branch atau posisi kita saat ini ke commit yg sblm nya sebanyak 1 langkah.
+    (git revert HEAD) digunakan utk reset pd remote branches dimana hasilnya adl posisi commit kita saat ini akan di copy lalu dibuatkan commit baru tetapi namanya akan menjadi C2' klo posisi commit trakhir kita tadi C2.
+    <br>9. Git Cherry-Pick: (git cherry-pick C2 C4) diketahui posisi head atau posisi saat ini ada di branch main yg ada pada C5, artinya kita melakukan copy C2 dan C4 kemudian kita taruh setelah C5 atau dicommit setelah C5.
+    <br>10. Git interactive rebase: (git rebase -i HEAD~4) artinya kita dapat melakukan copy dan membentuk branch baru dg settingnya lewat UI yg muncul atau biasanya lewat vim. Dari perintah itu ada HEAD~4 berarti Yang dapat diatur adalah urutan 4 commit sbm HEAD posisi saat ini , bisa juga untuk memilih commit mana yg tdk perlu di copy di branch yg akan dibentuk. Jgn lupa HEAD ke 4 dr posisi trakhir adl posisi start utk commit copyannya. cth hasil copy commit(C2', C4', C3')
+    <br>11. Juggling Commits: (git commit --amend) 
+    <br>12. Git Task: (git tag version1 C1) utk memberi catatan atau tag pada Commit C1 dan catatannya adalah version1.
+    <br>13. Git Descrive: (git describe namabranch) untuk memberi describe apa posisi commit yg di branch namabranch yg kita describe misanya ada commit C1(diberi tag v1) lalu setelah itu commit C2 lalu commit C3 nah posisi namabranch yg kita describe ada di C3 maka stelah kita git describe akan keluar keterangan mengenaai commit tsb yaitu v1_2_gC3.
+        </p>
+        <p>
+    1. Git clone : (git clone) untuk membuat cloning dari repository kita. Maka nanti remote branch pada repository kita akan ada branch yang bernama o/main artinya origin main. Clone (download) a repository that already exists on
+GitHub, including all of the files, branches, and commits
+<br>2. (git checkout o/main; git commit) : akan menghasilkan commit tp branch o/main tidak berpindah ke commit yg baru krn o/main hanya akan terupdate jika yg di remote di update.
+<br>3. (git fetch): mengambil commit saja dari remote repository. Perintah git fetch tidak akan langsung melakukan merge.
+<br>4. (git pull): mengambil commit terbaru lalu otomatis menggabungkan (merge) dengan branch yang aktif.
+Kapan Waktu yang Tepat Menggunakan git pull dan git fetch?Apabila kita sudah melakukan commit di repository lokal, maka yang kita gunakan adalah git fetch
+Kenapa menggunakan git fetch?Karena untuk mencegah terjadinya bentrok. Perintah git fetch akan mengambil commit terbaru dan menyimpannya di branch origin/master. Sedangkan apabila kita tidak pernah melakukan apa-apa di lokal repository, kita bisa menggunakan git pull. Perintah git pull di gunakan saat tidak ada commit yang pernah dilakukan di lokal. Sedangkan perintah git fetch digunakan kalau sudah ada commit yang dilakukan. Penggunaan git fetch lebih aman, karena kita akan melakukan merge branch secara manual. Sehingga kita bisa terhindar dari bentrokan. Perintah git pull biasanya digunakan untuk sync repo lokal dengan remote.
+<br>5. (git fake teamwork)
+<br>6. (git push) : push atau kirim smua commit terbaru kita di repository lokal ke repository remote, maka nanti o/main yg di local repository juga akanberubah ke commit yg trakhir kita update di remote.
+        </p>
     </body>
 </html>
